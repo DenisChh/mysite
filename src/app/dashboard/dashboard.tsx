@@ -17,7 +17,7 @@ const Dashboard = () => {
             <div className={styles.dashEntry} onClick={() => router.push('/about')}>
                 À propos
             </div>
-            <div className={styles.dashEntry}>
+            <div className={styles.dashEntry} onClick={() => router.push('/contact')}>
                 Contact
             </div>
         </div>
