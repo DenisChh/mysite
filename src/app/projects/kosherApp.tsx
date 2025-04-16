@@ -1,3 +1,5 @@
+'use client'
+
 import Image from 'next/image';
 import styles from './projects.module.css'
 import k1 from '../../../public/kosherApp/kosher1.jpg'
@@ -8,8 +10,28 @@ import k5 from '../../../public/kosherApp/kosher5.jpg'
 import k6 from '../../../public/kosherApp/kosher6.jpg'
 import k7 from '../../../public/kosherApp/kosher7.jpg'
 import k8 from '../../../public/kosherApp/kosher8.jpg'
+import leftArrow from '../../../public/larrow.png'
+import rightArrow from '../../../public/rarrow.png'
+import { useState } from 'react';
 
 const KosherApp = () => {
+    const [screenNumber, setScreenNumber] = useState(7)
+    const screenshot = [k1, k2, k3, k4, k5, k6, k7, k8]
+
+    function incrementScreenNumber() {
+        let n = screenNumber;
+
+        n + 1 > 7 ? n = 0 : n++;
+        setScreenNumber(n)
+    }
+
+    function decrementScreenNumber() {
+        let n = screenNumber;
+
+        n - 1 < 0 ? n = 7 : n--;
+        setScreenNumber(n)
+    }
+
     return (
         <div className={styles.projectDescription}>
             <h1 id={styles.header}> 100%Kosher </h1>
@@ -35,14 +57,33 @@ const KosherApp = () => {
                     </li>
                 </ul>
             </h3>
-            <div className={styles.screenshots}>
-                <Image
-                    src={k8}
-                    alt='app screen 8'
-                    width={200}
-                    height={400}
-                />
-                <Image
+            <div className={styles.row}>
+                <div className={styles.arrow} onClick={incrementScreenNumber}>
+                    <Image
+                        src={leftArrow}
+                        alt=''
+                        width={50}
+                        height={50}
+                    />
+                </div>
+                <div className={styles.screenshots} onClick={decrementScreenNumber}>
+                    <Image
+                        src={screenshot[screenNumber]}
+                        alt='app screen 8'
+                        width={200}
+                        height={400}
+                    />
+                </div>
+                <div className={styles.arrow} onClick={decrementScreenNumber}>
+                    <Image
+                        src={rightArrow}
+                        alt=''
+                        width={50}
+                        height={50}
+                    />
+                </div>
+
+                {/*<Image
                     src={k7}
                     alt='app screen 7'
                     width={200}
@@ -83,7 +124,7 @@ const KosherApp = () => {
                     alt='app screen 1'
                     width={200}
                     height={400}
-                />
+                />*/}
             </div>
         </div>
     )
