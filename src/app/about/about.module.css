@@ -20,6 +20,24 @@
     margin-top: 20px;
 }
 
+.links {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: bold;
+}
+
+.links:hover {
+    color: red;
+    transition: color 0.5s;
+    font-size: xx-large;
+    cursor: pointer;
+}
+
+#name {
+    color: yellow;
+}
+
 @media (max-width: 768px) {
     .row {
         flex-direction: column;
