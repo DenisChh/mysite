@@ -5,9 +5,12 @@ import profilePic from '../../../public/me.jpg'
 import Image from 'next/image'
 import rightArrow from '../../../public/rarrow.png'
 import { useRouter } from 'next/navigation'
+import { useNavigation } from '../context/navigation'
 
 const About = () => {
     const router = useRouter()
+    const { setSelected } = useNavigation()
+
     return (
         <div className={styles.main}>
             <div className={styles.row}>
@@ -37,10 +40,18 @@ const About = () => {
                                 height={40}
                             />
                             <div>
-                                Voir mon CV
+                                <a href='/CV2025-chess.pdf'>
+                                    Voir mon CV
+                                </a>
                             </div>
                         </div>
-                        <div className={styles.links} onClick={() => router.push('/projects')}>
+                        <div
+                            className={styles.links}
+                            onClick={() => {
+                                setSelected(1)
+                                router.push('/projects')
+                            }}
+                        >
                             <Image
                                 src={rightArrow}
                                 alt='arrow icon'

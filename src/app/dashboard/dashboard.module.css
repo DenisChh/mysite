@@ -20,3 +20,10 @@
     line-height: 50%;
     cursor: pointer;
 }
+
+.selected {
+    font-size: xx-large;
+    color: red;
+    border-bottom: 1px solid grey;
+    cursor: pointer;
+}

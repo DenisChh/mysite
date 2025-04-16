@@ -2,6 +2,7 @@
 
 import Image from 'next/image';
 import styles from './projects.module.css'
+import './projects.module.css'
 import k1 from '../../../public/kosherApp/kosher1.jpg'
 import k2 from '../../../public/kosherApp/kosher2.jpg'
 import k3 from '../../../public/kosherApp/kosher3.jpg'
@@ -70,8 +71,8 @@ const KosherApp = () => {
                     <Image
                         src={screenshot[screenNumber]}
                         alt='app screen 8'
-                        width={200}
-                        height={400}
+                        width={250}
+                        height={500}
                     />
                 </div>
                 <div className={styles.arrow} onClick={decrementScreenNumber}>
