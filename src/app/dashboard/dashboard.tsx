@@ -11,7 +11,7 @@ const Dashboard = () => {
             <div className={styles.dashEntry} onClick={() => router.push('/')}>
                 Accueil
             </div>
-            <div className={styles.dashEntry}>
+            <div className={styles.dashEntry} onClick={() => router.push('/projects')}>
                 Projets
             </div>
             <div className={styles.dashEntry} onClick={() => router.push('/about')}>

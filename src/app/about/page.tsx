@@ -16,7 +16,7 @@ const About = () => {
                     />
                 </div>
                 <div>
-                    <h3>
+                    <h3 id={styles.name}>
                         Denis Chheang, développeur fullstack
                     </h3>
                     <div>

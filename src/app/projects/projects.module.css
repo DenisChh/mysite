@@ -1,0 +1,54 @@
+.main {
+    display: flex;
+    flex-direction: row;
+    margin: auto;
+    margin-top: 20px;
+    width: 90%;
+    height: 95%;
+    gap: 40px;
+    border: 1px solid white;
+    color: white;
+}
+
+.projectList {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 30%;
+    gap: 20px;
+    font-size: x-large;
+    font-weight: bold;
+}
+
+.projectDescription {
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
+}
+
+.projectTitle:hover {
+    color: yellow;
+    font-size: xx-large;
+    cursor: pointer;
+    transition: color 0.5s;
+}
+
+.selected {
+    color: yellow;
+    font-size: xx-large;
+}
+
+.screenshots {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.title {
+    color: rgba(235, 168, 255, 0.836);
+    font-size: x-large;
+}
+
+#header {
+    color: yellow;
+}

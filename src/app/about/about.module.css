@@ -2,10 +2,11 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
     color: white;
-    margin-left: 20px;
-    margin-right: 20px;
+    width: 80%;
     height: 80%;
+    margin: auto;
     font-size: x-large;
 }
 
@@ -17,4 +18,25 @@
 
 .linksContainer {
     margin-top: 20px;
+}
+
+@media (max-width: 768px) {
+    .row {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+    }
+
+    .main {
+        width: 95%;
+    }
+
+    .linksContainer {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #name {
+        margin-top: 5px;
+    }
 }
