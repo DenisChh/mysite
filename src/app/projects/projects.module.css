@@ -15,7 +15,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    min-width: 180px;
+    min-width: 200px;
     gap: 20px;
     font-size: x-large;
     font-weight: bold;
@@ -76,8 +76,9 @@
 }
 
 .title {
-    color: rgba(235, 168, 255, 0.836);
+    color: rgba(250, 128, 199, 0.836);
     font-size: x-large;
+    font-weight: bold;
 }
 
 #header {

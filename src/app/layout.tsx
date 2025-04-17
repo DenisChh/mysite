@@ -1,18 +1,12 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Nunito} from "next/font/google";
 import "./globals.css";
 import Dashboard from "./dashboard/dashboard";
 import { NavigationProvider } from "./context/navigation";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const nunito = Nunito({
   subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
+})
 
 export const metadata: Metadata = {
   title: "Denis Chheang",
@@ -27,7 +21,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body style={{ margin: '0px', padding: '0px' }} className={`${geistSans.variable} ${geistMono.variable}`}>
+      <body style={{ margin: '0px', padding: '0px' }} className={`${nunito.className}`}>
         <NavigationProvider>
           <Dashboard />
           {children}

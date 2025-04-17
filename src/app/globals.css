@@ -6,6 +6,10 @@ body {
   position: absolute;
 }
 
+h1 {
+  color: yellow;
+}
+
 h2 {
   margin: 5px;
 }
