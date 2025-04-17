@@ -9,7 +9,6 @@ import { useNavigation } from '../context/navigation'
 
 const About = () => {
     const router = useRouter()
-    const { setSelected } = useNavigation()
 
     return (
         <div className={styles.main}>
@@ -28,7 +27,7 @@ const About = () => {
                         Denis Chheang, développeur fullstack
                     </h3>
                     <div>
-                        Dans un monde où la technologie est en perpétuelle évolution, je suis à la recherche
+                        Dans un monde où la technologie est en perpétuelle évolution, je suis constamment à la recherche
                         de nouveaux défis qui me permettront de contribuer à façonner le monde de demain.
                     </div>
                     <div className={styles.linksContainer}>
@@ -39,16 +38,13 @@ const About = () => {
                                 width={40}
                                 height={40}
                             />
-                            <div>
-                                <a href='/CV2025-chess.pdf'>
-                                    Voir mon CV
-                                </a>
-                            </div>
+                            <a className={styles.links} href='/CV2025-chess.pdf'>
+                                Voir mon CV
+                            </a>
                         </div>
                         <div
                             className={styles.links}
                             onClick={() => {
-                                setSelected(1)
                                 router.push('/projects')
                             }}
                         >

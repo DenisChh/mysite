@@ -47,16 +47,32 @@
 }
 
 .screenshots {
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+    aspect-ratio: 1 / 1;
     cursor: pointer;
+}
+
+.mobileScreenshots {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 1 / 2.2;
+    max-width: 230px;
+    cursor: pointer;
+}
+
+.responsiveImage {
+    object-fit: contain;
 }
 
 .row {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
     align-items: center;
-    width: 90%;
-    border: 1px solid white;
     gap: 40px;
+    width: 90%;
 }
 
 .title {
@@ -80,5 +96,13 @@
     }
     .projectDescription {
         width: 90%;
+    }
+
+    .screenshots {
+        max-width: 400px;
+    }
+
+    .mobileScreenshots {
+        max-width: 200px;
     }
 }

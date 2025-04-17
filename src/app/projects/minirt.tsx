@@ -64,8 +64,10 @@ const Minirt = () => {
                 <div className={styles.screenshots} onClick={incrementScreenNumber}>
                     <Image
                         src={screenshot[screenNumber]}
-                        alt='app screen 8'
-                        sizes='(max-width:900px) 200px, 200px'
+                        fill
+                        alt='app screen'
+                        className={styles.responsiveImage}
+                        sizes='(max-width:900px) 600px, 600px'
                     />
                 </div>
                 <div className={styles.arrow} onClick={incrementScreenNumber}>

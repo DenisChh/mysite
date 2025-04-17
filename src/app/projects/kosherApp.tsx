@@ -67,12 +67,13 @@ const KosherApp = () => {
                         height={50}
                     />
                 </div>
-                <div className={styles.screenshots} onClick={decrementScreenNumber}>
-                    <Image
+                <div className={styles.mobileScreenshots} onClick={decrementScreenNumber}>
+                <Image
                         src={screenshot[screenNumber]}
-                        alt='app screen 8'
-                        width={250}
-                        height={500}
+                        fill
+                        alt='app screen'
+                        className={styles.responsiveImage}
+                        sizes='(max-width:900px) 230px, 500px'
                     />
                 </div>
                 <div className={styles.arrow} onClick={decrementScreenNumber}>

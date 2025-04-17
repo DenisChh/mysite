@@ -17,6 +17,8 @@
 }
 
 .linksContainer {
+    display: flex;
+    flex-direction: column;
     margin-top: 20px;
 }
 
@@ -47,11 +49,13 @@
 
     .main {
         width: 95%;
+        margin-top: 50px;
     }
 
     .linksContainer {
         flex-direction: column;
         align-items: center;
+        margin-top: 40px;
     }
 
     #name {

@@ -1,45 +1,46 @@
 'use client'
 
-import { useRouter } from 'next/navigation'
+import { usePathname, useRouter } from 'next/navigation'
 import styles from './dashboard.module.css'
 import { useNavigation } from '../context/navigation'
+import { useEffect } from 'react'
 
 const Dashboard = () => {
     const router = useRouter()
+    const pathname = usePathname()
     const {selected, setSelected} = useNavigation()
+
+    useEffect(() => {
+        if (pathname.includes('projects'))
+            setSelected(1)
+        else if (pathname.includes('about'))
+            setSelected(2)
+        else if (pathname.includes('contact'))
+            setSelected(3)
+        else
+            setSelected(0)
+    }, [pathname])
 
     return (
         <div className={styles.main}>
             <div
                 className={!selected ? styles.selected : styles.dashEntry}
-                onClick={() => {
-                    router.push('/')
-                    setSelected(0)
-                }}>
+                onClick={() => { router.push('/') }}>
                 Accueil
             </div>
             <div
                 className={selected === 1 ? styles.selected : styles.dashEntry}
-                onClick={() => {
-                    router.push('/projects')
-                    setSelected(1)
-                }}>
+                onClick={() => { router.push('/projects') }}>
                 Projets
             </div>
             <div
                 className={selected === 2 ? styles.selected : styles.dashEntry}
-                onClick={() => {
-                    router.push('/about')
-                    setSelected(2)
-                }}>
+                onClick={() => { router.push('/about') }}>
                 À propos
             </div>
             <div
                 className={selected === 3 ? styles.selected : styles.dashEntry}
-                onClick={() => {
-                    router.push('/contact')
-                    setSelected(3)
-                }}>
+                onClick={() => { router.push('/contact') }}>
                 Contact
             </div>
         </div>

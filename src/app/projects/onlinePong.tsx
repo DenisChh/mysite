@@ -58,7 +58,7 @@ const Pong = () => {
                 </ul>
             </h3>
             <div className={styles.row}>
-                <div className={styles.arrow} onClick={incrementScreenNumber}>
+                <div className={styles.arrow} onClick={decrementScreenNumber}>
                     <Image
                         src={leftArrow}
                         alt=''
@@ -66,15 +66,16 @@ const Pong = () => {
                         height={50}
                     />
                 </div>
-                <div className={styles.screenshots} onClick={decrementScreenNumber}>
-                    <Image
+                <div className={styles.screenshots} onClick={incrementScreenNumber}>
+                <Image
                         src={screenshot[screenNumber]}
-                        alt='app screen 8'
-                        width={600}
-                        height={500}
+                        fill
+                        alt='app screen'
+                        className={styles.responsiveImage}
+                        sizes='(max-width:900px) 600px, 600px'
                     />
                 </div>
-                <div className={styles.arrow} onClick={decrementScreenNumber}>
+                <div className={styles.arrow} onClick={incrementScreenNumber}>
                     <Image
                         src={rightArrow}
                         alt=''
