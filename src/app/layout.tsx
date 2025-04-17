@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
-import { Nunito} from "next/font/google";
+import { Nunito } from "next/font/google";
 import "./globals.css";
 import Dashboard from "./dashboard/dashboard";
 import { NavigationProvider } from "./context/navigation";
+import PageTransition from "./transition/transition";
 
 const nunito = Nunito({
   subsets: ["latin"],
@@ -24,7 +25,10 @@ export default function RootLayout({
       <body style={{ margin: '0px', padding: '0px' }} className={`${nunito.className}`}>
         <NavigationProvider>
           <Dashboard />
-          {children}
+          <PageTransition>
+            {children}
+          </PageTransition>
+
         </NavigationProvider>
       </body>
     </html>
