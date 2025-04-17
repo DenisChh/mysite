@@ -28,7 +28,6 @@ export default function RootLayout({
           <PageTransition>
             {children}
           </PageTransition>
-
         </NavigationProvider>
       </body>
     </html>
