@@ -24,13 +24,29 @@
 .projectDescription {
     display: flex;
     flex-direction: column;
-    width: 100%;
+    width: 80%;
     height: 100%;
     padding: 20px;
     margin-top: 10px;
     overflow-y: scroll;
     overflow-x: hidden;
     scrollbar-width: none;
+}
+
+.projectContainer {
+    animation-duration: 0.5s;
+    animation-name: slide-in;
+}
+
+@keyframes slide-in {
+    from {
+        translate: 150vw 0;
+        scale: 200% 1;
+    }
+    to {
+        translate: 0 0;
+        scale: 100% 1;
+    }
 }
 
 .projectDescription::-webkit-scrollbar {

@@ -29,7 +29,7 @@ const Minirt = () => {
     }
 
     return (
-        <>
+        <div className={styles.projectContainer}>
             <h1 id={styles.header}> Minirt </h1>
             <h3>
                 <span className={styles.title}> Description </span> :
@@ -63,7 +63,7 @@ const Minirt = () => {
                     />
                 </div>
             </div>
-        </>
+        </div>
     )
 }
 

@@ -34,7 +34,7 @@ const KosherApp = () => {
     }
 
     return (
-        <>
+        <div className={styles.projectContainer}>
             <h1 id={styles.header}> 100%Kosher </h1>
             <h3>
                 <span className={styles.title}> Description </span> : App alimentaire visant à renseigner les utilisateurs sur les
@@ -113,7 +113,7 @@ const KosherApp = () => {
                     height={400}
                 />*/}
             </div>
-        </>
+        </div>
     )
 }
 

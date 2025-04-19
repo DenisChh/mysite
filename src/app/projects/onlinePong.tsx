@@ -37,7 +37,7 @@ const Pong = () => {
     }
 
     return (
-        <>
+        <div className={styles.projectContainer}>
             <h1 id={styles.header}> Online Pong </h1>
             <h3>
                 <span className={styles.title}> Description </span> :
@@ -68,7 +68,7 @@ const Pong = () => {
                     />
                 </div>
             </div>
-        </>
+        </div>
     )
 }
 
