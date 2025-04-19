@@ -124,6 +124,10 @@
         width: 90%;
     }
 
+    .row {
+        width: 100%;
+    }
+
     .screenshots {
         max-width: 400px;
     }

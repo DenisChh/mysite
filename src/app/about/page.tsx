@@ -13,7 +13,7 @@ const About = () => {
     return (
         <div className={styles.main}>
             <div className={styles.row}>
-                <div>
+                <div className={styles.profilePic}>
                     <Image
                         src={profilePic}
                         alt='profile pic'
@@ -26,10 +26,13 @@ const About = () => {
                     <h3 id={styles.name}>
                         Denis Chheang, développeur fullstack
                     </h3>
-                    <div>
-                        Dans un monde où la technologie est en perpétuelle évolution, je suis constamment à la recherche
-                        de nouveaux défis qui me permettront de contribuer à façonner le monde de demain.
-                    </div>
+                    <h5>
+                        Issu d’un environnement peu propice à l’épanouissement personnel,
+                        j’ai développé une sensibilité particulière aux enjeux liés à l’éducation,
+                        au bien-être, à l’ouverture d’esprit et à l’empathie.
+                        Aujourd’hui, je souhaite mettre mes compétences au service de projets porteurs de sens,
+                        qui contribuent à un monde plus juste, plus humain et plus inclusif pour chacun·e.
+                    </h5>
                     <div className={styles.linksContainer}>
                         <div className={styles.links}>
                             <Image
