@@ -34,7 +34,7 @@ const KosherApp = () => {
     }
 
     return (
-        <div className={styles.projectDescription}>
+        <>
             <h1 id={styles.header}> 100%Kosher </h1>
             <h3>
                 <span className={styles.title}> Description </span> : App alimentaire visant à renseigner les utilisateurs sur les
@@ -59,14 +59,6 @@ const KosherApp = () => {
                 </ul>
             </h3>
             <div className={styles.row}>
-                <div className={styles.arrow} onClick={incrementScreenNumber}>
-                    <Image
-                        src={leftArrow}
-                        alt=''
-                        width={50}
-                        height={50}
-                    />
-                </div>
                 <div className={styles.mobileScreenshots} onClick={decrementScreenNumber}>
                 <Image
                         src={screenshot[screenNumber]}
@@ -76,14 +68,7 @@ const KosherApp = () => {
                         sizes='(max-width:900px) 230px, 500px'
                     />
                 </div>
-                <div className={styles.arrow} onClick={decrementScreenNumber}>
-                    <Image
-                        src={rightArrow}
-                        alt=''
-                        width={50}
-                        height={50}
-                    />
-                </div>
+
 
                 {/*<Image
                     src={k7}
@@ -128,7 +113,7 @@ const KosherApp = () => {
                     height={400}
                 />*/}
             </div>
-        </div>
+        </>
     )
 }
 

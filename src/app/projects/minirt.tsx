@@ -29,7 +29,7 @@ const Minirt = () => {
     }
 
     return (
-        <div className={styles.projectDescription}>
+        <>
             <h1 id={styles.header}> Minirt </h1>
             <h3>
                 <span className={styles.title}> Description </span> :
@@ -53,14 +53,6 @@ const Minirt = () => {
                 </ul>
             </h3>
             <div className={styles.row}>
-                <div className={styles.arrow} onClick={decrementScreenNumber}>
-                    <Image
-                        src={leftArrow}
-                        alt=''
-                        width={50}
-                        height={50}
-                    />
-                </div>
                 <div className={styles.screenshots} onClick={incrementScreenNumber}>
                     <Image
                         src={screenshot[screenNumber]}
@@ -70,16 +62,8 @@ const Minirt = () => {
                         sizes='(max-width:900px) 600px, 600px'
                     />
                 </div>
-                <div className={styles.arrow} onClick={incrementScreenNumber}>
-                    <Image
-                        src={rightArrow}
-                        alt=''
-                        width={50}
-                        height={50}
-                    />
-                </div>
             </div>
-        </div>
+        </>
     )
 }
 

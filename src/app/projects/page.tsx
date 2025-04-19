@@ -43,9 +43,11 @@ const Projects = () => {
                     </div>
                 </div>
             </div>
-            {!project && <KosherApp />}
-            {project === 1 && <Pong />}
-            {project === 2 && <Minirt />}
+            <div className={styles.projectDescription}>
+                {!project && <KosherApp />}
+                {project === 1 && <Pong />}
+                {project === 2 && <Minirt />}
+            </div>
         </div>
     )
 }
